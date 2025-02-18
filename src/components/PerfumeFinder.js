@@ -257,7 +257,7 @@ const MakikoStore = () => {
                 className="relative aspect-[4/3] group cursor-pointer overflow-hidden"
               >
                 <img
-                  src="/api/placeholder/400/300"
+                  src={`${category}.jpeg`}
                   alt={category}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
