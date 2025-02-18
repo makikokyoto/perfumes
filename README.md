@@ -1,141 +1,36 @@
-# 🌸 Perfume Finder
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-A modern, elegant perfume recommendation website built with React and inspired by Kyoto aesthetics. This frontend-only application helps users discover perfumes based on their preferences through an intuitive filtering system.
+## Getting Started
 
-![Perfume Finder Screenshot](/api/placeholder/800/400)
-
-## ✨ Features
-
-- 🎨 **Elegant Kyoto-Inspired Design**: Clean UI with soft colors and minimalist Japanese aesthetics
-- 📱 **Fully Responsive**: Optimized for all devices from mobile to desktop
-- 🌓 **Dark/Light Mode**: Toggle between themes for comfortable viewing
-- ⚡ **Dynamic Filtering System**: Filter perfumes by:
-  - Scent type (Floral, Woody, Fresh, Oriental)
-  - Season
-  - Intensity
-  - Price range
-  - Trending status
-- 🎭 **Smooth Animations**: Powered by Framer Motion
-- 💫 **Interactive UI Elements**: Real-time updates and transitions
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm (v6 or higher)
-
-### Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/perfume-finder.git
-cd perfume-finder
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Start the development server:
+First, run the development server:
 
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-4. Open your browser and visit:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```
-http://localhost:5173
-```
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-## 🛠️ Built With
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- **[React](https://reactjs.org/)** - UI Framework
-- **[Vite](https://vitejs.dev/)** - Build Tool
-- **[Tailwind CSS](https://tailwindcss.com/)** - Styling
-- **[Framer Motion](https://www.framer.com/motion/)** - Animations
-- **[Lucide React](https://lucide.dev/)** - Icons
+## Learn More
 
-## 📂 Project Structure
+To learn more about Next.js, take a look at the following resources:
 
-```
-perfume-finder/
-├── src/
-│   ├── components/
-│   │   └── PerfumeFinder.jsx    # Main component
-│   ├── App.jsx                  # Root component
-│   ├── index.css               # Global styles
-│   └── main.jsx                # Entry point
-├── public/                     # Static assets
-└── ...config files
-```
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## 🎨 Customization
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-### Adding New Perfumes
+## Deploy on Vercel
 
-Add new perfumes to the `perfumeData` array in `PerfumeFinder.jsx`:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-```javascript
-const perfumeData = [
-  {
-    id: 6, // Increment ID
-    name: "Your New Perfume",
-    type: "Floral", // Choose from existing types
-    description: "Your description",
-    season: "Spring", // Choose from seasons
-    image: "/path/to/image",
-    price: 125,
-    notes: ["Note 1", "Note 2", "Note 3"],
-    intensity: "Medium", // Light, Medium, or Strong
-    trending: false,
-  },
-  // ... existing perfumes
-];
-```
-
-### Modifying Filter Options
-
-Customize filter options by updating the respective arrays:
-
-```javascript
-const scentTypes = ["All", "Floral", "Woody", "Fresh", "Oriental"];
-const seasons = ["All", "Spring", "Summer", "Autumn", "Winter"];
-const intensities = ["All", "Light", "Medium", "Strong"];
-```
-
-## 📱 Responsive Breakpoints
-
-The application uses Tailwind's default breakpoints:
-
-- `sm`: 640px
-- `md`: 768px
-- `lg`: 1024px
-- `xl`: 1280px
-- `2xl`: 1536px
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## 🙏 Acknowledgments
-
-- Inspired by Kyoto's traditional aesthetics
-- Icons provided by [Lucide](https://lucide.dev/)
-- Placeholder images via API
-
----
-
-Made with ❤️ by Makiko and Irving
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
