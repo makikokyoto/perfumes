@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+# 🌸 Perfume Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, elegant perfume recommendation website built with React and inspired by Kyoto aesthetics. This frontend-only application helps users discover perfumes based on their preferences through an intuitive filtering system.
 
-## Available Scripts
+![Perfume Finder Screenshot](/api/placeholder/800/400)
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- 🎨 **Elegant Kyoto-Inspired Design**: Clean UI with soft colors and minimalist Japanese aesthetics
+- 📱 **Fully Responsive**: Optimized for all devices from mobile to desktop
+- 🌓 **Dark/Light Mode**: Toggle between themes for comfortable viewing
+- ⚡ **Dynamic Filtering System**: Filter perfumes by:
+  - Scent type (Floral, Woody, Fresh, Oriental)
+  - Season
+  - Intensity
+  - Price range
+  - Trending status
+- 🎭 **Smooth Animations**: Powered by Framer Motion
+- 💫 **Interactive UI Elements**: Real-time updates and transitions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js (v14 or higher)
+- npm (v6 or higher)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/yourusername/perfume-finder.git
+cd perfume-finder
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+3. Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm run dev
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Open your browser and visit:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+http://localhost:5173
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🛠️ Built With
 
-## Learn More
+- **[React](https://reactjs.org/)** - UI Framework
+- **[Vite](https://vitejs.dev/)** - Build Tool
+- **[Tailwind CSS](https://tailwindcss.com/)** - Styling
+- **[Framer Motion](https://www.framer.com/motion/)** - Animations
+- **[Lucide React](https://lucide.dev/)** - Icons
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📂 Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+perfume-finder/
+├── src/
+│   ├── components/
+│   │   └── PerfumeFinder.jsx    # Main component
+│   ├── App.jsx                  # Root component
+│   ├── index.css               # Global styles
+│   └── main.jsx                # Entry point
+├── public/                     # Static assets
+└── ...config files
+```
 
-### Code Splitting
+## 🎨 Customization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Adding New Perfumes
 
-### Analyzing the Bundle Size
+Add new perfumes to the `perfumeData` array in `PerfumeFinder.jsx`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```javascript
+const perfumeData = [
+  {
+    id: 6, // Increment ID
+    name: "Your New Perfume",
+    type: "Floral", // Choose from existing types
+    description: "Your description",
+    season: "Spring", // Choose from seasons
+    image: "/path/to/image",
+    price: 125,
+    notes: ["Note 1", "Note 2", "Note 3"],
+    intensity: "Medium", // Light, Medium, or Strong
+    trending: false,
+  },
+  // ... existing perfumes
+];
+```
 
-### Making a Progressive Web App
+### Modifying Filter Options
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Customize filter options by updating the respective arrays:
 
-### Advanced Configuration
+```javascript
+const scentTypes = ["All", "Floral", "Woody", "Fresh", "Oriental"];
+const seasons = ["All", "Spring", "Summer", "Autumn", "Winter"];
+const intensities = ["All", "Light", "Medium", "Strong"];
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📱 Responsive Breakpoints
 
-### Deployment
+The application uses Tailwind's default breakpoints:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- `sm`: 640px
+- `md`: 768px
+- `lg`: 1024px
+- `xl`: 1280px
+- `2xl`: 1536px
 
-### `npm run build` fails to minify
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## 🙏 Acknowledgments
+
+- Inspired by Kyoto's traditional aesthetics
+- Icons provided by [Lucide](https://lucide.dev/)
+- Placeholder images via API
+
+---
+
+Made with ❤️ by Makiko and Irving
