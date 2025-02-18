@@ -3,8 +3,6 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShoppingBag, Search, Menu, X } from "lucide-react";
 
-const animal = ["dog", "cat", "cow"];
-
 const perfumeData = [
   {
     id: 1,
@@ -292,7 +290,7 @@ const MakikoStore = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="aspect-[3/4] bg-[#f8f6f3]">
                   <img
-                    src="/api/placeholder/300/400"
+                    src={selectedProduct.image}
                     alt={selectedProduct.name}
                     className="w-full h-full object-cover"
                   />
